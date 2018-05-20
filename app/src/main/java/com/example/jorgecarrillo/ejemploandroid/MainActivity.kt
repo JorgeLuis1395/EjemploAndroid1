@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
         buttonSpinner.setOnClickListener{v: View? ->  irAActividadSpinner()}
         buttonCrear.setOnClickListener{v: View? -> irAActividadCrearUsuario() }
+        buttonLeerArchivo.setOnClickListener { v: View? -> irLecturadeArchivos() }
     }
     fun irActividad2(){
        val intent = Intent(this, Actividad2::class.java)
@@ -72,5 +73,19 @@ class MainActivity : AppCompatActivity() {
     fun irAActividadCrearUsuario() {
         val intent = Intent(this, CrearUsuarioActivity::class.java)
         startActivity(intent)
+    }
+    fun irActividadBaseDatos(){
+        val intent = Intent (this,BaseDatos::class.java)
+        startActivity(intent)
+    }
+    fun irFrames(){
+        val intent = Intent(this,Frames::class.java)
+        startActivity(intent)
+    }
+
+    fun irLecturadeArchivos() {
+        val intent = Intent(this, LecturaArchivos::class.java)
+        startActivity(intent)
+
     }
 }

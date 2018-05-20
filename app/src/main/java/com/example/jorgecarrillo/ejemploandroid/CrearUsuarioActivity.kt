@@ -17,7 +17,7 @@ class CrearUsuarioActivity : AppCompatActivity() {
     }
 
     fun crearUsuario() {
-        val nombre = editTextNombre.text.toString()
+        val nombre = editTextNombreEs.text.toString()
         val apellido = editTextApellido.text.toString()
         val color = editTextColor.text.toString()
         Factory.usuarios.add(Usuario(nombre, apellido, color))
